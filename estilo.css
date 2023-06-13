@@ -236,6 +236,12 @@ html{
     display: block;
     margin-bottom: 10px;
 }
+.skills .skill i{
+    font-weight: bold;
+    display: flexbox;
+    font-size: 20px;
+    width: 4%;
+}
 .skills .skill .barras-skill{
     height: 8px;
     width: 80%;
