@@ -8,6 +8,7 @@
 html{
     scroll-behavior: smooth;
 }
+/** Header **/
 .contenedor-header{
     background: #1e2326;
     position: fixed;
@@ -53,6 +54,7 @@ html{
     cursor: pointer;
     display: none;
 }
+/** Inicio **/
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
     url(img/fondo.jpg);
@@ -103,6 +105,7 @@ html{
 .inicio .contenedor-banner .redes a:hover{
     background-color: #1CB698;
 }
+/** SOBREMI **/
 .sobremi{
     background-color: #1e2326;
     color: #fff;
@@ -204,6 +207,7 @@ html{
 .sobremi button:hover .overlay{
     width: 100%;
 }
+/** SKILLS **/
 .skills{
     background-color: #252A2E;
     color: #fff;
@@ -348,6 +352,7 @@ html{
     0%{width: 0%;}
     100%{width: 90%;}
 }
+/** CURRICULUM **/
 .curriculum{
     background-color: #1e2326;
     color: #fff;
@@ -452,6 +457,7 @@ html{
     position: relative;
     bottom: 4px;
 }
+/** PORTAFOLIO **/
 .portfolio{
     background-color: #252A2E;
     color: #fff;
@@ -539,6 +545,7 @@ html{
 .portfolio button:hover .overlay2{
     width: 100%;
 }
+/** VIDEO CONTENEDOR **/
 .video-container {
     position: fixed;
     top: 0;
@@ -556,6 +563,7 @@ html{
     width: 80%;
     max-height: 80%;
 }
+/** CONTACTO **/
 .contacto{
     background-image: url(img/contact_bg.png);
     background-color: #1e2326;
@@ -639,6 +647,7 @@ html{
     display: inline-block;
     margin-right: 10px;
 }
+/** FOOTER **/
 footer{
     background-color: #252A2E;
     color: #fff;
