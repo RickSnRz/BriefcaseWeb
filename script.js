@@ -32,6 +32,10 @@ function efectoHabilidades(){
     }
 }
 
+function redirigirURL(url) {
+    window.open(url, '_blank');
+}
+
 window.onscroll = function(){
     efectoHabilidades();
 } 
