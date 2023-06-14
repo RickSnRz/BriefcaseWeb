@@ -36,6 +36,41 @@ function redirigirURL(url) {
     window.open(url, '_blank');
 }
 
+var videoElement = null;
+function reproducirVideo(videoUrl) {
+    var videoContainer = document.createElement('div');
+    videoContainer.className = 'video-container';
+
+    videoElement = document.createElement('video');
+    videoElement.setAttribute('src', videoUrl);
+    videoElement.setAttribute('controls', 'controls');
+    videoElement.setAttribute('autoplay', 'autoplay');
+
+    videoContainer.appendChild(videoElement);
+
+    document.body.appendChild(videoContainer);
+
+    videoContainer.addEventListener('click', salirDelVideo);
+}
+
+function salirDelVideo(event) {
+    var videoContainer = event.currentTarget;
+
+    // Comprobar si el evento ocurrió dentro del contenedor de video o el propio video
+    var isInsideVideoContainer = (event.target === videoElement) || videoElement.contains(event.target);
+
+    if (!isInsideVideoContainer || event.key === 'Escape') {
+        videoElement.pause();
+        videoElement.currentTime = 0;
+
+        videoContainer.parentNode.removeChild(videoContainer);
+        videoElement = null;
+
+        // Remover listeners para evitar conflictos
+        videoContainer.removeEventListener('click', salirDelVideo);
+    }
+}
+
 window.onscroll = function(){
     efectoHabilidades();
 } 
