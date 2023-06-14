@@ -56,7 +56,7 @@ function reproducirVideo(videoUrl) {
 function salirDelVideo(event) {
     var videoContainer = event.currentTarget;
 
-    // Comprobar si el evento ocurrió dentro del contenedor de video o el propio video
+    
     var isInsideVideoContainer = (event.target === videoElement) || videoElement.contains(event.target);
 
     if (!isInsideVideoContainer || event.key === 'Escape') {
@@ -66,7 +66,7 @@ function salirDelVideo(event) {
         videoContainer.parentNode.removeChild(videoContainer);
         videoElement = null;
 
-        // Remover listeners para evitar conflictos
+        
         videoContainer.removeEventListener('click', salirDelVideo);
     }
 }
