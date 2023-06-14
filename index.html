@@ -332,15 +332,19 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Numero Telefonico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <form action="https://formsubmit.co/rickx213@gmail.com" method="POST">
+                    <input type="text" placeholder="Tú Nombre" name="Nombre">
+                    <input type="text" placeholder="Numero Telefonico" name="Telefono">
+                    <input type="text" placeholder="Dirección de correo" name="Email">
+                    <input type="text" placeholder="Tema" name="Tema">
+                    <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
                     <button>
                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contacto">
+                    <input type="hidden" name="_captcha" value="false">
+                    </form>
                 </div>
                 <div class="col">
                     <img src="img/ubicacion.png" alt="">
