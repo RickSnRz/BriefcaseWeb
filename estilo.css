@@ -611,6 +611,10 @@ html{
     position: relative;
     z-index: 10;
 }
+.contacto button i{
+    display: flexbox;
+    width: 30px;
+}
 .contacto button .overlay{
     position: absolute;
     top: 0;
