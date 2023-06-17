@@ -681,7 +681,7 @@ footer .redes a{
     display: inline-block;
     text-decoration: none;
     background: #171515;
-    border-radius: 100%;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -717,15 +717,38 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
+    background: #171515;
     color: #fff;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 48.5%;
+    transition: .5s;
     top: -25px;
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
+}
+footer .arriba::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background: #d35400;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+footer .arriba:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d35400;
+    filter: blur(3px);
+}
+footer .arriba:hover {
+    color: #ffa502;
+    box-shadow: 0 0 15px #d35400;
+    text-shadow: 0 0 15px #d35400;
 }
 @media screen and (max-width:980px){
     nav{
