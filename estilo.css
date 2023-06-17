@@ -167,6 +167,8 @@ html{
     height: 100px;
     background-color: #252A2E;
     border-radius: 10px;
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 0px 0px 30px rgb(0, 255, 255);
     margin: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
@@ -176,6 +178,7 @@ html{
 }
 .sobremi .fila .col .contenedor-intereses .interes:hover{
     background-color: #1CB698;
+    transform: scale(0.98);
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
@@ -193,6 +196,9 @@ html{
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 0px 0px 30px rgb(0, 255, 255);
 }
 .sobremi button .overlay{
     position: absolute;
@@ -490,6 +496,9 @@ html{
     max-width: 340px;
     height: fit-content;
 }
+.portfolio .galeria .proyecto .imagen:hover{
+    transform: scale(0.95);
+}
 .portfolio .galeria .proyecto .imagen img{
     width: 100%;
     display: block;
@@ -531,6 +540,9 @@ html{
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 0px 0px 30px rgb(0, 255, 255);
 }
 .portfolio button .overlay2{
     position: absolute;
