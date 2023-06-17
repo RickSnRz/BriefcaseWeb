@@ -498,7 +498,7 @@ html{
     height: fit-content;
 }
 .portfolio .galeria .proyecto .imagen:hover{
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 .portfolio .galeria .proyecto .imagen img{
     width: 100%;
