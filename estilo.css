@@ -729,7 +729,7 @@ footer .redes a:before{
     z-index: -1;
 }
 footer .redes a:hover::before{
-    transform: scale(1.2);
+    transform: scale(0.98);
     box-shadow: 0 0 15px #d35400;
     filter: blur(3px);
 }

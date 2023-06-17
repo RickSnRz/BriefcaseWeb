@@ -73,4 +73,4 @@ function salirDelVideo(event) {
 
 window.onscroll = function(){
     efectoHabilidades();
-} 
+}
