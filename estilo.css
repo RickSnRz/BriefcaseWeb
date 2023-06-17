@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+:root {
+    --glow-color: hsl(0, 85%, 52%);
+}
 *{
     box-sizing: border-box;
     font-family: 'Work Sans';
@@ -116,10 +120,10 @@ html{
     font-weight: normal;
 }
 .inicio .contenedor-banner .redes a{
-    color: #fff;
+    color: var(--glow-color);
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--glow-color);
     border-radius: 100%;
     width: 40px;
     height: 42px;
@@ -127,9 +131,21 @@ html{
     margin: 40px 5px;
     font-size: 20px;
     transition: .3%;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
 }
 .inicio .contenedor-banner .redes a:hover{
-    background-color: #1CB698;
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: var(--glow-color);
 }
 /** SOBREMI **/
 .sobremi{
@@ -638,33 +654,204 @@ html{
 }
 .contacto button{
     cursor: pointer;
+    background: none;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    perspective: none;
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: var(--glow-color);
     position: relative;
     z-index: 10;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 3px;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+.glowing-word {
+    float: left;
+    margin-right: 0.1em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+}
+.contacto button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+.contacto button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.contacto button:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.contacto button:hover .glowing-word {
+    animation: none;
+}
+
+.contacto button:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.contacto button:hover:before {
+    filter: blur(1.5em);
+    opacity: 0;
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+}
+
+.contacto button:hover:after {
+    opacity: 1;
+}
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 0.1;
+    }
+    4% {
+        opacity: 0.5;
+    }
+    19% {
+        opacity: 0.5;
+    }
+    21% {
+        opacity: 0.1;
+    }
+    23% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contacto button {
+        font-size: 1em;
+    }
 }
 .contacto button i{
     display: flexbox;
     width: 30px;
-}
-.contacto button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #1CB698;
-    z-index: -1;
-    transition: 1s;
-}
-.contacto button:hover .overlay{
-    width: 100%;
 }
 .contacto .col img{
     width: 100%;
