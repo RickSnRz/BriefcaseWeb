@@ -436,6 +436,7 @@ html{
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    margin-bottom: 30px;
 }
 .curriculum .fila{
     display: flex;
@@ -545,6 +546,7 @@ html{
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    margin-bottom: 30px;
 }
 .portfolio .galeria{
     display: flex;
@@ -658,6 +660,7 @@ html{
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    margin-bottom: 30px;
 }
 .contacto .fila{
     display: flex;
@@ -671,11 +674,51 @@ html{
     display: block;
     width: 100%;
     padding: 18px;
-    border: none;
     margin-bottom: 20px;
     background-color: #252A2E;
+    outline: none;
+    border: 1px solid #b6551c;
     color: #fff;
     font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #b6551c;
+}
+.contacto .col input::placeholder{
+    color: #b6551c;
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.contacto .col textarea::placeholder{
+    color: #b6551c;
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.contacto .col input:focus{
+    box-shadow: 0px 0px 30px #b6551c;
+}
+.contacto .col textarea:focus{
+    box-shadow: 0px 0px 30px #b6551c;
+}
+.contacto .col input:focus::placeholder{
+    top: -20px;
+    font-size: 12px;
+    color: #b6551c;
+}
+.contacto .col textarea:focus::placeholder{
+    top: -20px;
+    font-size: 12px;
+    color: #b6551c;
 }
 .contacto button{
     cursor: pointer;
@@ -882,6 +925,8 @@ html{
     width: 100%;
     height: 88%;
     display: block;
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px #0000008c;
 }
 .contacto .col .info{
     position: absolute;
@@ -891,9 +936,41 @@ html{
     width: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 16px 14px 20px #0000008c;
+    overflow: hidden;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacto .col .info::before{
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(red 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.contacto .col .info::after{
+    content: "";
+    position: absolute;
+    height: 149px;
+    width: 389px;
+    background-color: #252A2E;
+    border-radius: 10%;
+    box-shadow: inset 16px 14px 20px #252A2E;
 }
 .contacto .col .info ul{
     list-style: none;
+    z-index: 2;
 }
 .contacto .col .info ul li{
     margin-bottom: 20px;
