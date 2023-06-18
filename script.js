@@ -75,26 +75,47 @@ window.onscroll = function(){
     efectoHabilidades();
 }
 
-const container = document.querySelector('.inicio')
-
+const container = document.querySelector('.inicio');
+const banner = document.querySelector('.contenedor-banner');
+let bannerRect;
 const figures = () => {
+    const containerRect = container.getBoundingClientRect();
+    const containerHeight = containerRect.height;
+    const containerWidth = containerRect.width;
+    const bannerRect = banner.getBoundingClientRect();
+    const figureSize = 50;
+
     for(let i = 0; i <= 25; i++){
         let figure = document.createElement('span')
-        const containerRect = container.getBoundingClientRect();
-        const containerHeight = containerRect.height;
-        const containerWidth = containerRect.width;
+        let x, y;
         
-        figure.style.top = Math.random() * (containerHeight - 50) + 'px';
-        figure.style.left = Math.random() * (containerWidth - 50) + 'px';
+        do {
+            x = Math.random() * (containerWidth - figureSize);
+            y = Math.random() * (containerHeight - figureSize);
+        } while (checkCollision(x, y, figureSize, bannerRect));
 
-
-        container.append(figure)
+        figure.style.top = y + 'px';
+        figure.style.left = x + 'px';
+        container.appendChild(figure);
 
         setInterval(() => {
             figure.style.top = Math.random() * (containerHeight - 50) + 'px';
-        figure.style.left = Math.random() * (containerWidth - 50) + 'px';
+            figure.style.left = Math.random() * (containerWidth - 50) + 'px';
         }, 5000)
     }
 }
 
-figures()
+const checkCollision = (x, y, size, bannerRect) => {
+    if (
+        x + size > bannerRect.left &&
+        x < bannerRect.right &&
+        y + size > bannerRect.top &&
+        y < bannerRect.bottom
+    ) {
+        return true;
+    }
+    return false;
+}
+
+
+figures();
