@@ -449,10 +449,10 @@ html{
     margin-bottom: 25px;
 }
 .curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
+    border-right: 3px solid #252A2E;
 }
 .curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
+    border-left: 3px solid #252A2E;
 }
 .curriculum .fila .item{
     padding: 25px;
@@ -481,10 +481,12 @@ html{
 .curriculum .fila .izq{
     border-right: 2px solid #1CB698;
     margin-right: 20px;
+    box-shadow: 8px 0px 10px -10px rgb(0, 255, 255);
 }
 .curriculum .fila .der{
     border-left: 2px solid #1CB698;
     margin-left: 20px;
+    box-shadow: -8px 0px 10px -10px rgb(0, 255, 255);
 }
 .curriculum .fila .item .conectori{
     height: 2px;
@@ -504,6 +506,7 @@ html{
     float: right;
     position: relative;
     bottom: 4px;
+    box-shadow: 0px 0px 30px rgb(0, 255, 255);
 }
 .curriculum .fila .item .conectord{
     height: 2px;
@@ -513,6 +516,7 @@ html{
     top: 50%;
     left: -47px;
     z-index: 5;
+    box-shadow: 0px 0px 30px rgb(0, 255, 255);
 }
 .curriculum .fila .item .conectord .circulod{
     display: block;
