@@ -74,3 +74,27 @@ function salirDelVideo(event) {
 window.onscroll = function(){
     efectoHabilidades();
 }
+
+const container = document.querySelector('.inicio')
+
+const figures = () => {
+    for(let i = 0; i <= 25; i++){
+        let figure = document.createElement('span')
+        const containerRect = container.getBoundingClientRect();
+        const containerHeight = containerRect.height;
+        const containerWidth = containerRect.width;
+        
+        figure.style.top = Math.random() * (containerHeight - 50) + 'px';
+        figure.style.left = Math.random() * (containerWidth - 50) + 'px';
+
+
+        container.append(figure)
+
+        setInterval(() => {
+            figure.style.top = Math.random() * (containerHeight - 50) + 'px';
+        figure.style.left = Math.random() * (containerWidth - 50) + 'px';
+        }, 5000)
+    }
+}
+
+figures()
