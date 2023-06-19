@@ -276,7 +276,9 @@ html{
 }
 /** SKILLS **/
 .skills{
-    background-color: #252A2E;
+    background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgb(18, 20, 22)),
+    url(img/fondo3.jpg) top center no-repeat;
+    background-size: cover;
     color: #fff;
     padding: 50px 20px;
 }
@@ -533,7 +535,9 @@ html{
 }
 /** PORTAFOLIO **/
 .portfolio{
-    background-color: #252A2E;
+    background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgb(18, 20, 22)),
+    url(img/fondo2.jpg) center center no-repeat;
+    background-size: cover;
     color: #fff;
     padding: 50px 20px;
 }
