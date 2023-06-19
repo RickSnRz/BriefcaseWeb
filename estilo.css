@@ -569,8 +569,9 @@ html{
     transform: scale(0.9);
 }
 .portfolio .galeria .proyecto .imagen img{
-    width: 100%;
+    width: 330px;
     display: block;
+    height: 250px;
 }
 .portfolio .galeria .proyecto .imagen .overlay{
     position: absolute;
