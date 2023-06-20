@@ -114,12 +114,26 @@ html{
     z-index: 2;
 }
 .inicio .contenedor-banner img{
+    position: relative;
     margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
     width: 80%;
     margin: auto;
     border-radius: 100%;
+    transform: translate(0%, 0%);
+    border: 1px solid rgb(100, 199, 199);
+    box-shadow: 0px 0px 30px rgb(100, 199, 199);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px rgb(100, 199, 199),
+        0px 0px 0.5em 0px rgb(100, 199, 199);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px rgb(100, 199, 199),
+        0px 0px 0.5em 0px rgb(100, 199, 199);
+    box-shadow: inset 0px 0px 30px rgb(100, 199, 199),
+    0px 0px 30px rgb(100, 199, 199);
+    animation: border-flicker 10s linear infinite;
 }
 .inicio .contenedor-banner h1{
     margin-top: 40px;
