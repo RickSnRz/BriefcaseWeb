@@ -205,7 +205,9 @@ html{
 }
 /** SOBREMI **/
 .sobremi{
-    background-color: #1e2326;
+    background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgba(18, 20, 22)),
+    url(img/fondo5.jpg) center center no-repeat;
+    background-size: cover;
     color: #fff;
     padding: 50px 20px;
 }
@@ -356,9 +358,9 @@ html{
 }
 .skills .skill i{
     font-weight: bold;
-    font-size: 20px;
-    width: 29px;
-    color: rgb(91, 105, 105);;
+    font-size: 28px;
+    width: 38px;
+    color: rgb(89, 155, 155);
 }
 .skills .skill .barras-skill{
     height: 8px;
@@ -470,7 +472,9 @@ html{
 }
 /** CURRICULUM **/
 .curriculum{
-    background-color: #1e2326;
+    background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgba(56, 65, 70, 0.8)),
+    url(img/fondo4.jpg) center center no-repeat;
+    background-size: cover;
     color: #fff;
     padding: 50px 20px;
 }
