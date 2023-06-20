@@ -116,24 +116,55 @@ html{
 .inicio .contenedor-banner img{
     position: relative;
     margin-top: 40px;
-    width: 80%;
+    width: 97%;
+    height: 97%;
     margin: auto;
     border-radius: 100%;
-    transform: translate(0%, 0%);
-    border: 1px solid rgb(100, 199, 199);
-    box-shadow: 0px 0px 30px rgb(100, 199, 199);
-    overflow: hidden;
+    z-index: 2;
+}
+.inicio .contenedor-img{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    -webkit-box-shadow: inset 0px 0px 0.5em 0px rgb(100, 199, 199),
-        0px 0px 0.5em 0px rgb(100, 199, 199);
-    -moz-box-shadow: inset 0px 0px 0.5em 0px rgb(100, 199, 199),
-        0px 0px 0.5em 0px rgb(100, 199, 199);
-    box-shadow: inset 0px 0px 30px rgb(100, 199, 199),
-    0px 0px 30px rgb(100, 199, 199);
-    animation: border-flicker 10s linear infinite;
+    align-items: center;
+    overflow: hidden;
+}
+.inicio .contenedor-img::before{
+    content: "";
+    position: absolute;
+    inset: -30px 100px;
+    background: linear-gradient(315deg,transparent,transparent,#00ccff,#d400d4);
+    transition: 0.5s;
+    animation: animate 2s linear infinite;
+    box-shadow: 0px 0px 30px #d400d4;
+}
+.inicio .contenedor-img:hover::before{
+    inset: -20px 0px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.inicio .contenedor-img::after{
+    content: "";
+    position: absolute;
+    inset: -40px 100px;
+    background: linear-gradient(315deg,transparent,transparent,#2b95af,#310431);
+    transition: 0.5s;
+    animation: animate 2s linear infinite;
+    animation-delay: -1s;
+    box-shadow: 0px 0px 30px #310431;
+}
+.inicio .contenedor-img:hover::after{
+    inset: -20px 0px;
 }
 .inicio .contenedor-banner h1{
     margin-top: 40px;
