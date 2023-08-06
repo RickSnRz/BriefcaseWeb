@@ -993,35 +993,10 @@ html{
     transform: translate(-50%, -50%);
     box-shadow: 16px 14px 20px #0000008c;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contacto .col .info::before{
-    content: "";
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    background-image: conic-gradient(red 20deg, transparent 120deg);
-    animation: rotar 2s linear infinite;
-}
-@keyframes rotar{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(-360deg);
-    }
-}
-.contacto .col .info::after{
-    content: "";
-    position: absolute;
-    height: 149px;
-    width: 389px;
-    background-color: #252A2E;
-    border-radius: 10%;
-    box-shadow: inset 16px 14px 20px #252A2E;
 }
 .contacto .col .info ul{
     list-style: none;
