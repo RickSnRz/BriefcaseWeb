@@ -992,7 +992,6 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 16px 14px 20px #0000008c;
-    overflow: hidden;
     border-radius: 2%;
     display: flex;
     align-items: center;
@@ -1000,10 +999,18 @@ html{
 }
 .contacto .col .info ul{
     list-style: none;
-    z-index: 2;
 }
 .contacto .col .info ul li{
     margin-bottom: 20px;
+}
+.contacto .col .info ul li #a{
+    margin-left: 10px;
+}
+.contacto .col .info ul li #b{
+    margin-left: 11px;
+}
+.contacto .col .info ul li #c{
+    margin-left: 7px;
 }
 .contacto .col .info ul li i{
     color: #1CB698;
