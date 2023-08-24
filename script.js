@@ -132,14 +132,8 @@ enlaces.forEach(function (enlace) {
       linkedin:
         "https://www.linkedin.com/in/rick-sam%C3%A1n-ramirez-67b9a725b/",
     };
-    if (plataforma === "facebook") {
-      window.location.href = urls.facebook;
-    } else if (plataforma === "github") {
-      window.location.href = urls.github;
-    } else if (plataforma === "instagram") {
-      window.location.href = urls.instagram;
-    } else if (plataforma === "linkedin") {
-      window.location.href = urls.linkedin;
+    if (plataforma in urls) {
+      window.open(urls[plataforma], "_blank");
     } else {
       console.log("Plataforma no reconocida");
     }
