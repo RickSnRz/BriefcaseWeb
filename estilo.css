@@ -86,7 +86,7 @@ html{
 /** Inicio **/
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg) center transparent;
+    url(img/fondo.webp) center transparent;
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -206,7 +206,7 @@ html{
 /** SOBREMI **/
 .sobremi{
     background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgba(18, 20, 22)),
-    url(img/fondo5.jpg) center center no-repeat;
+    url(img/fondo5.webp) center center no-repeat;
     background-size: cover;
     color: #fff;
     padding: 50px 20px;
@@ -324,7 +324,7 @@ html{
 /** SKILLS **/
 .skills{
     background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgb(18, 20, 22)),
-    url(img/fondo3.jpg) top center no-repeat;
+    url(img/fondo3.webp) top center no-repeat;
     background-size: cover;
     color: #fff;
     padding: 50px 20px;
@@ -473,7 +473,7 @@ html{
 /** CURRICULUM **/
 .curriculum{
     background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgba(56, 65, 70, 0.8)),
-    url(img/fondo4.jpg) center center no-repeat;
+    url(img/fondo4.webp) center center no-repeat;
     background-size: cover;
     color: #fff;
     padding: 50px 20px;
@@ -585,7 +585,7 @@ html{
 /** PORTAFOLIO **/
 .portfolio{
     background: linear-gradient(to top, rgba(56, 65, 70, 0.8), rgb(18, 20, 22)),
-    url(img/fondo2.jpg) center center no-repeat;
+    url(img/fondo2.webp) center center no-repeat;
     background-size: cover;
     color: #fff;
     padding: 50px 20px;
@@ -703,7 +703,7 @@ html{
 }
 /** CONTACTO **/
 .contacto{
-    background-image: url(img/contact_bg.png);
+    background-image: url(img/contact_bg.webp);
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
