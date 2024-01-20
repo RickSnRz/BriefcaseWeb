@@ -143,12 +143,12 @@ enlaces.forEach(function (enlace) {
 let botonDescargar = document.getElementById("descargarCV");
 
 botonDescargar.addEventListener("click", function () {
-  let urlPDF = "PDF/Rick SAMÁN.pdf"; // Reemplaza esto con la ruta correcta
+  let urlPDF = "PDF/RICK SAMAN CV.pdf"; // Reemplaza esto con la ruta correcta
 
   let link = document.createElement("a");
   link.href = urlPDF;
   link.target = "_blank";
-  link.download = "Rick SAMÁN.pdf";
+  link.download = "RICK SAMAN CV.pdf";
 
   document.body.appendChild(link);
   link.click();
