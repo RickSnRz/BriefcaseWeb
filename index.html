@@ -328,18 +328,17 @@
             <h2>CONTACTO</h2>
             <div class="fila">
                 <div class="col">
-                    <form action="https://formsubmit.co/rickx213@gmail.com" method="POST">
+                    <form id="form" method="POST">
+                    <input type="hidden" name="access_key" value="70f2b1fc-8456-40ec-855d-0c0017bb4998">
                     <input type="text" placeholder="Tú Nombre" name="Nombre" required>
                     <input type="text" placeholder="Numero Telefonico" name="Telefono" required>
                     <input type="text" placeholder="Dirección de correo" name="Email" required>
                     <input type="text" placeholder="Tema" name="Tema" required>
                     <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea required>
-                    <button>
+                    <button type="submit">
                         <span class="glowing-word">ENVIAR MENSAJE</span><span class="faulty-letter"><i class="fa-solid fa-paper-plane"></i></span>
                         
                     </button>
-                    <input type="hidden" name="_next" value="https://www.ricksnrz.me/#contacto">
-                    <input type="hidden" name="_captcha" value="false">
                     </form>
                 </div>
                 <div class="col">
@@ -378,5 +377,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

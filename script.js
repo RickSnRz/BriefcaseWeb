@@ -155,3 +155,57 @@ botonDescargar.addEventListener("click", function () {
 
   document.body.removeChild(link);
 });
+
+
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              Swal.fire({
+                title: "Success!",
+                text: "Tu mensaje ha sido enviado con éxito!",
+                icon: "success"
+              });
+            } else {
+              console.log(response);
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Se a producido un error!",
+                footer: '<a href="#">Why do I have this issue?</a>'
+              });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Se a producido un error!",
+              footer: '<a href="#">Why do I have this issue?</a>'
+            });
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
